@@ -2,7 +2,7 @@ Java EE Tools
 ============
 Mail session tester
 ---
-Jboss configuration for Gmail
+Jboss configuration in standalone.xml for Gmail
 
     <mail-session jndi-name="java:jboss/mail/Default">
       <smtp-server ssl="true" outbound-socket-binding-ref="mail-smtp">
