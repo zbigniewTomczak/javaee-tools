@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+<h:head></h:head> 
+<body> 
+<h:outputText value="Send email from specified mail session to any email." />
+<h:form>
+	<h:panelGrid columns="2">
+	<h:panelGrid  columns="2">
+		<h:outputLabel value="Email" for="email"/>
+		<h:inputText value="#{emailSenderController.email}" required="true"/>
+		
+		<h:outputLabel value="JNDI" for="jndi"/>
+		<h:inputText value="#{emailSenderController.jndi}" required="true"/>
+		
+		<h:outputLabel value="Username property" for="userProp"/>
+		<h:inputText value="#{emailSenderController.userProp}" required="true"/>
+		
+		
+		<h:outputLabel value="Password property" for="passwordProp"/>
+		<h:inputText value="#{emailSenderController.passwordProp}" required="true"/>
+		
+		<h:selectOneRadio value="#{emailSenderController.vendorCode}" >
+			<f:selectItem itemLabel="Weblogic" itemValue="1" />
+			<f:selectItem itemLabel="Jboss" itemValue="2" />
+		</h:selectOneRadio>
+		
+		<h:commandButton action="#{emailSenderController.send}" value="Send" />
+	</h:panelGrid>
+	<h:dataTable value="#{emailSenderController.properties}" var="prop" style="padding-left:12em;">
+		<f:facet name="header">Properties:</f:facet>
+		<h:column><h:outputText value="#{prop.key}" /></h:column>
+		<h:column><h:outputText value="#{prop.value}" /></h:column>
+	</h:dataTable>
+	</h:panelGrid>
+	<h:messages />
+	<p>
+		<h:outputText value="#{emailSenderController.errorDetail}" escape="false"/>
+	</p>
+</h:form>
+</body> 
+</html>
