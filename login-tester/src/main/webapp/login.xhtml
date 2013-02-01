@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>Login</title>
+</h:head>
+<body>
+	<form method="post" action="j_security_check" name="loginForm">
+		<!--<h:panelGrid columns="2">
+			 <h:outputLabel value="Username:" for="j_username" />
+			<h:inputText id="j_username" />
+			<h:outputLabel value="Password:" for="j_password" />
+			<h:inputSecret id="j_password" /> 
+		</h:panelGrid>-->
+		<strong> User ID</strong> <input type="text" size="20"
+			name="j_username" /> <strong> Password </strong> <input
+			type="password" size="20" name="j_password" /> <input type="submit"
+			value="Login" name="login" />
+	</form>
+	<h:form>
+		<h:commandLink action="#{loginManager.logout}" value="Logout" />
+	</h:form>
+	<h:outputText value="Logged" rendered="#{loginManager.logged}" />
+	<h:outputText value="Not logged" rendered="#{not loginManager.logged}" />
+	<h:panelGrid columns="2">
+		<h:outputText value="Session" />
+		<h:outputText value="#{loginManager.session}" />
+		<h:outputText value="Remote user" />
+		<h:outputText value="#{loginManager.remoteUser}" />
+		<h:outputText value="Auth type" />
+		<h:outputText value="#{loginManager.authType}" />
+		<h:outputText value="Role Manager" />
+		<h:outputText value="#{loginManager.roleManager}" />
+	</h:panelGrid>
+</body>
+</html>

@@ -39,7 +39,7 @@ public class EmailSenderController {
 			errorDetail = "";
 			EmailSender es = null;
 			if (vendorCode==1) {
-				es = new AuthenticatedEmailSesnder(email, jndi, currentHost(), userProp, passwordProp);
+				es = new AuthenticatedEmailSender(email, jndi, currentHost(), userProp, passwordProp);
 			} else {
 				es = new EmailSender(email, jndi, currentHost());
 			}

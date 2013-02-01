@@ -7,12 +7,12 @@ import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 import javax.naming.NamingException;
 
-public class AuthenticatedEmailSesnder extends EmailSender {
+public class AuthenticatedEmailSender extends EmailSender {
 
 	private String userProp;
 	private String passwordProp;
 
-	public AuthenticatedEmailSesnder(String email, String jndi, String host, String userProp, String passwordProp) {
+	public AuthenticatedEmailSender(String email, String jndi, String host, String userProp, String passwordProp) {
 		super(email, jndi, host);
 		this.userProp = userProp;
 		this.passwordProp = passwordProp;
