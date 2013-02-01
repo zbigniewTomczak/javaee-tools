@@ -7,7 +7,7 @@
 	<parent>
 		<artifactId>javaee-tools</artifactId>
 		<groupId>tomczak</groupId>
-		<version>1.0.1</version>
+		<version>0.9-SNAPSHOT</version>
 	</parent>
 	
 	<properties>

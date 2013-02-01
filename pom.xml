@@ -3,10 +3,15 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>tomczak</groupId>
   <artifactId>javaee-tools</artifactId>
-  <version>1.0.1</version>
+  <version>0.9-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
   	<module>mail-session-tester</module>
     <module>login-tester</module>
   </modules>
+  <scm>
+	<connection>scm:git:git@github.com:git@github.com:zbigniewTomczak/javaee-tools.git</connection>
+	<url>scm:git:git@github.com:git@github.com:zbigniewTomczak/javaee-tools.git</url>
+	<developerConnection>scm:git:git@github.com:git@github.com:zbigniewTomczak/javaee-tools.git</developerConnection>
+  </scm>
 </project>
