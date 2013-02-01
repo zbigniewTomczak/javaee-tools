@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>tomczak</groupId>
   <artifactId>javaee-tools</artifactId>
-  <version>0.9</version>
+  <version>0.9-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
   	<module>mail-session-tester</module>
