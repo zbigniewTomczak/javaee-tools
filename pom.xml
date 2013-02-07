@@ -8,6 +8,7 @@
   <modules>
   	<module>mail-session-tester</module>
     <module>login-tester</module>
+    <module>jpa-sql-injection-tester</module>
   </modules>
   <scm>
 	<connection>scm:git:git@github.com:git@github.com:zbigniewTomczak/javaee-tools.git</connection>
